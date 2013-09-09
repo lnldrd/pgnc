@@ -1,0 +1,12 @@
+.bSquare
+{
+fill : url(chrome://PGNChess/content/board/board.svg#bsq) ;
+}
+.wSquare
+{
+fill : url(chrome://PGNChess/content/board/board.svg#wsq) ;
+}
+.label
+{
+fill : url(chrome://PGNChess/content/board/board.svg#bsq) ;
+}

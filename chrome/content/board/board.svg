@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+
+<?xml-stylesheet type="text/css" href="chrome://PGNChess/skin/board.css" ?> 
+
+<svg 
+   id="svgboard"
+   viewBox="0 0 500 500"
+   preserveAspectRatio="xMidYMid meet"
+   xml:lang="en" 
+   xmlns="http://www.w3.org/2000/svg" 
+   xmlns:xlink="http://www.w3.org/1999/xlink" 
+   onload='Init(evt)'
+   onmousedown='Grab(evt)'
+   onmousemove='Drag(evt)'
+   onmouseup='Drop(evt)'
+   >
+   <title>PGNChess</title>
+   <desc>this is a correspondence Chess game for thunderbird using standard PGN format with FEN support</desc>
+
+   <!-- STYLING   -->
+   <defs>
+      <pattern x='0' y='0' id='wsq' height='100%' width='100%' patternUnits="objectBoundingBox" patternContentUnits="objectBoundingBox">
+         <image width='1' height='1' xlink:href='chrome://PGNChess/skin/wsq.png'/>
+      </pattern>
+      <pattern x='0' y='0' id='bsq' height='100%' width='100%' patternUnits="objectBoundingBox" patternContentUnits="objectBoundingBox">
+         <image width='1' height='1' xlink:href='chrome://PGNChess/skin/bsq.png'/>
+      </pattern>
+   </defs>
+
+
+   <!-- STRUCTURE -->
+   <rect width='500' height='500' opacity='.8' class='wSquare'/>
+   <g id="scrap"> <!-- hidden pieces -->
+      <g id="splash-help">
+         <rect width='400' height='400' fill='black' opacity='.8' x='50' y='50'/>
+         <text x='60' y='100' fill='ivory' font-size='50'> Help </text>
+         <text x='75' y='150' fill='ivory' font-size='35'> F1 : Help </text>
+         <text x='75' y='190' fill='ivory' font-size='35'> F2 : Preferences </text>
+         <text x='75' y='230' fill='ivory' font-size='35'> F3 : Game infos </text>
+         <text x='75' y='290' fill='ivory' font-size='35'> n  : Next move </text>
+         <text x='75' y='330' fill='ivory' font-size='35'> p  : Previous move </text>
+         <text x='75' y='390' fill='ivory' font-size='35'> Esc  : Back to game </text>
+      </g>
+   </g>
+   <g id="tags" /> <!-- tags and buttons -->
+   <g id="board"/> <!-- squares -->
+   <g id="pieces"/> <!-- visible pieces -->
+   <g id="splash"/> <!-- splash screen -->
+
+   <!-- SCRIPT -->
+   <script type="application/ecmascript;version=1.7" xlink:href="js/game/init.js"/>
+   <script type="application/ecmascript;version=1.7" xlink:href="js/game/rules.js"/>
+   <script type="application/ecmascript;version=1.7" xlink:href="js/game/parsing.js"/>
+   <script type="application/ecmascript;version=1.7" xlink:href="js/display/pieces.js"/>
+   <script type="application/ecmascript;version=1.7" xlink:href="js/display/interface.js"/>
+   <script type="application/ecmascript;version=1.7" xlink:href="js/display/board.js"/>
+   <script type="application/ecmascript;version=1.7"> game.init(); </script> <!-- launch game -->
+</svg>
+
+<!-- vim:ft=xml
+     -->

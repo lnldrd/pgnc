@@ -1,0 +1,53 @@
+@import url(chrome://global/skin/);
+
+menubar{
+   -moz-appearance: none;
+   background: rgba(0, 0, 0, 0.6);
+   -moz-menubartext: orange;
+}
+
+menu{
+   -moz-appearance: none;
+   color: ivory;
+   font-size: 35px;
+   min-width: 250px;
+   background: transparent;
+}
+
+label{
+   color: ivory;
+}
+
+menu:hover{
+   background: rgba(255,225,240,.4);
+}
+
+menupopup{
+   -moz-appearance: none;
+   min-width: 250px;
+   background: transparent;
+}
+
+menuitem{
+   min-width: 180px;
+   -moz-appearance: none;
+   color: ivory;
+   font-size: 60%;
+   background: black;
+}
+
+menuitem:hover{
+   background: rgba(255,225,240,.4);
+}
+
+#pgnc-window {
+   -moz-appearance: none;
+   background-image: url(chrome://PGNChess/skin/bg.jpg);
+   display: block;
+   width: 100%;
+   height: 100%;
+}
+
+#svgboard{
+   border: 0;
+}

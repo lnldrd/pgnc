@@ -1,0 +1,6 @@
+content  PGNChess chrome/content/
+locale   PGNChess en-US chrome/locale/en-US/
+skin     PGNChess classic chrome/skin/default/
+
+overlay chrome://messenger/content/mailWindowOverlay.xul chrome://PGNChess/content/popup.xul
+

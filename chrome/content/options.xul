@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<prefwindow
+   id="PGNC-prefwindow"
+   title="PGNC Preferences"
+   xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+   <prefpane label="PGNC Preferences">
+      <preferences>
+         <preference id="PGNC-scale" name="extensions.PGNChess.scale" type="bool"/>
+      </preferences>
+
+      <groupbox>
+         <caption label="Settings"/>
+         <grid>
+            <columns>
+               <column flex="4"/>
+
+               <column flex="1"/>
+            </columns>
+            <rows>
+               <row>
+                  <label control="scale" value="Scale"/>
+                  <scale min="1" max="200" id="scale" preference="PGNC-scale"/>
+               </row>
+               <row>
+                  <label control="flip" value="Autoflip"/>
+                  <checkbox id="flip" preference="PGNC-scale"/>
+               </row>
+            </rows>
+         </grid>
+      </groupbox> 
+
+      <groupbox>
+         <caption label="Player infos"/>
+         <grid>
+            <columns>
+               <column flex="4"/>
+
+               <column flex="1"/>
+            </columns>
+            <rows>
+               <row>
+                  <label control="scale" value="Name"/>
+                  <scale min="50" max="150" id="scale" preference="PGNC-scale"/>
+               </row>
+               <row>
+                  <label control="flip" value="Autoflip"/>
+                  <checkbox id="flip" preference="PGNC-scale"/>
+               </row>
+            </rows>
+         </grid>
+      </groupbox> 
+
+
+   </prefpane>
+
+</prefwindow>

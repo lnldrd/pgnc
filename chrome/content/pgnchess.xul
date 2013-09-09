@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://pgnchess/skin/" type="text/css"?>
+<!DOCTYPE window>
+<window
+   id="pgnc-window"
+   title="PGN Chess"
+   xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:html="http://www.w3.org/1999/xhtml"
+   >
+   <menubar height='50' pack='center'>
+      <menu pack='center' accesskey="g"> 
+         <label value="Game" accesskey="g"/>
+            <menupopup align='center'>
+               <menuitem label="New game"/>
+               <menuitem label="Send mail"/>
+               <menuitem label="Surrender"/>
+               <menuitem label="Propose draw"/>
+               <menuitem label="Exit"/>
+            </menupopup>
+      </menu>
+      <menu pack='center' accesskey="p">
+         <label value="Play" accesskey="p"/>
+         <menupopup align='center'>
+            <menuitem label="Next move" onclick="alert('Hello world!\n');" />
+            <menuitem label="Previous move" onclick="alert('Hello world!\n');" />
+            <menuitem label="First move" onclick="alert('Hello world!\n');"/>
+            <menuitem label="Last move"  onclick="alert('Hello world!\n');"/>
+         </menupopup>
+      </menu>
+      <menu pack='center' accesskey="h">
+         <label value="Help" accesskey="h"/>
+         <menupopup align='center'>
+            <menuitem label="Shortcuts"/>
+            <menuitem label="About"/>
+         </menupopup>
+      </menu>
+   </menubar>
+   <notificationbox id='pgnc-nb' />
+   <vbox id='display' flex='1' align='center' pack='center'>
+      <html:iframe type="content" src="chrome://PGNChess/content/board/board.svg" height="500" width="500" id="svgboard"/>
+   </vbox>
+
+   <script>
+      var nb=document.getElementById('pgnc-nb');
+   </script>
+   <script 
+      type="application/x-javascript" 
+      src="chrome://PGNChess/content/js/NS.js"/>
+</window>
